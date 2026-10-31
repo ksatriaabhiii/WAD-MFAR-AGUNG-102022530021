@@ -1,0 +1,168 @@
+/* Pengaturan Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Latar belakang halaman dibuat abu-abu lembut agar konten terlihat menonjol */
+body {
+    background-color: #e5e7eb; 
+    color: #1f2937;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 900px; /* Diperlebar sedikit agar nyaman dibaca */
+}
+
+/* --- Banner Atas --- */
+.banner {
+    background: linear-gradient(135deg, #45b5aa, #309b91); /* Gradient teal yang lebih modern */
+    color: white; /* Teks diubah jadi putih agar kontras */
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.banner h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.banner p {
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+/* --- Kartu Tabel Voucher --- */
+.voucher-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 10px 30px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05); /* Bayangan lembut */
+}
+
+/* Pengaturan Lebar Kolom Flexbox */
+.column-header, .voucher-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.col-name { width: 45%; }
+.col-discount { width: 30%; font-weight: 700; font-size: 18px;}
+.col-action { width: 25%; }
+
+/* --- Header Kolom --- */
+.column-header {
+    padding: 20px 0;
+    border-bottom: 2px solid #e5e7eb;
+    font-size: 14px;
+    font-weight: 600;
+    color: #4b5563;
+}
+
+/* --- Baris Voucher --- */
+.voucher-row {
+    padding: 24px 0;
+    border-bottom: 1px solid #f3f4f6;
+}
+.voucher-row:last-child {
+    border-bottom: none; /* Hilangkan garis di baris terakhir */
+}
+
+.voucher-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 6px;
+}
+
+.voucher-min-spend {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+/* --- Tombol & Aksi --- */
+.btn-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* Tombol Klaim (Hijau Modern) */
+.btn-klaim {
+    background-color: #10b981;
+    color: white;
+    border: none;
+    padding: 10px 32px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
+}
+
+.btn-klaim:hover {
+    background-color: #059669;
+    transform: translateY(-2px); /* Efek melayang saat kursor di atasnya */
+}
+
+/* Tombol Sudah Klaim (Abu-abu) */
+.btn-disabled {
+    background-color: #6b7280;
+    color: #e5e7eb;
+    border: none;
+    padding: 10px 32px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: not-allowed;
+}
+
+/* Label Merah "Segera Berakhir" yang dirapikan */
+.badge-red {
+    position: absolute;
+    top: -14px;
+    right: -10px;
+    background-color: #ef4444;
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    border: 2px solid white; /* Garis tepi putih agar terpisah dari tombol */
+    z-index: 2;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+/* --- Footer Ketentuan --- */
+.footer-terms {
+    margin-top: 25px;
+    font-size: 12px;
+    color: #6b7280;
+    line-height: 1.6;
+    text-align: justify;
+    padding: 0 10px;
+}
+
+/* Tambahan untuk status voucher dari database */
+.status-available {
+    display: inline-block;
+    color: #047857;
+    background: #d1fae5;
+    border-radius: 8px;
+    padding: 9px 14px;
+    font-size: 13px;
+    font-weight: 700;
+}
